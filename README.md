@@ -1,5 +1,5 @@
 ```markdown
-# bvh-to-smplh
+# BVH-to-SMPLH
 
 Reliable utilities to convert BVH motion data into SMPL-H style NPZ files, postprocess them (grounding and stabilization), and export NPZ back to BVH for DCC/game-engine visualization.
 
@@ -14,7 +14,7 @@ This repository contains multiple pipeline variants. The sections below describe
 
 ## Project Layout
 
-### motion/
+### Motion Module
 
 - `bvh_loader.py`:
     Recursive BVH parser (hierarchy, channels, End Site blocks, frame matrix).
@@ -27,7 +27,7 @@ This repository contains multiple pipeline variants. The sections below describe
 - `production_exporter.py`:
     One-off production conversion script with hardcoded defaults.
 
-### scripts/
+### Scripts
 
 - `smplh_processor.py`:
     Main single-file BVH -> NPZ processor (52-joint SMPL-H style output).
@@ -40,7 +40,7 @@ This repository contains multiple pipeline variants. The sections below describe
 - `inspect_skeleton.py`:
     Prints hierarchy/offset tree from BVH header.
 
-### scripts/utils/
+### Scripts Utils
 
 - `npz_to_bvh.py`:
     Template-based NPZ -> BVH exporter (uses source BVH header/channel map).
